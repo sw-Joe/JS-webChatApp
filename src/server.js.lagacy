@@ -1,0 +1,24 @@
+// const sockets = [];
+
+// wss.on("connection", (serverSocket) => { 
+//   sockets.push(serverSocket);
+//   serverSocket["nickname"] = "Anonymous"    // nickname의 초기값 설정
+//   console.log("✅ Connected to Browser");
+
+//   serverSocket.on("close", () => console.log("❌ Disconnected from the Browser"))
+//   // WebSocket에서 데이터를 기본적으로 binary buffer 형태로 전달(문자열 변환 필요)
+//   serverSocket.on("message", (msg) => {
+//     const message = JSON.parse(msg)
+//     switch(message.type) {
+//       case "nickname":
+//         serverSocket["nickname"] = message.payload;
+//         break;
+//       case "new_msg":
+//         sockets.forEach((aSocket) => aSocket.send(
+//           `${serverSocket.nickname}: ${message.payload}`
+//         ));
+//         break;
+//     }
+//   });
+//   // serverSocket.send("hello, socket");   // socket.data, send data from BACKEND to FRONTEND
+// });
